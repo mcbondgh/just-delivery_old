@@ -12,9 +12,9 @@ public class DbConnection {
 
     protected Connection getCon(){
         try {
-            String URL = loadProps().getProperty("spring.datasource.url");
-            String USERNAME = loadProps().getProperty("spring.datasource.username");
-            String PASSWORD = loadProps().getProperty("spring.datasource.password");
+            String URL = loadProps().getProperty("datasource.url");
+            String USERNAME = loadProps().getProperty("datasource.username");
+            String PASSWORD = loadProps().getProperty("datasource.password");
             connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
             // connection.setAutoCommit(false);
         } catch (SQLException e) {

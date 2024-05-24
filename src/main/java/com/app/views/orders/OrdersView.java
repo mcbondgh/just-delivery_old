@@ -1,6 +1,7 @@
 package com.app.views.orders;
 
-import com.app.views.MainLayout;
+import com.app.layouts.HomeLayout;
+import com.app.layouts.MainLayout;
 import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.html.Paragraph;
@@ -10,13 +11,13 @@ import com.vaadin.flow.router.Route;
 import com.vaadin.flow.theme.lumo.LumoUtility.Margin;
 
 @PageTitle("Orders")
-@Route(value = "empty", layout = MainLayout.class)
+@Route(value = "views/orders", layout = MainLayout.class)
 public class OrdersView extends VerticalLayout {
 
     public OrdersView() {
         setSpacing(false);
 
-        Image img = new Image("images/empty-plant.png", "placeholder plant");
+        Image img = new Image("images/delivery-logo.png", "placeholder plant");
         img.setWidth("200px");
         add(img);
 

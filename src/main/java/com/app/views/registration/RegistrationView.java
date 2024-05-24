@@ -1,6 +1,5 @@
-package com.app.views.dashboard;
+package com.app.views.registration;
 
-import com.app.layouts.HomeLayout;
 import com.app.layouts.MainLayout;
 import com.vaadin.flow.component.Composite;
 import com.vaadin.flow.component.dependency.Uses;
@@ -12,13 +11,13 @@ import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.RouteAlias;
 import com.vaadin.flow.theme.lumo.LumoUtility.Gap;
 
-@PageTitle("Dashboard")
-@Route(value = "/dashboard", layout = MainLayout.class)
-@RouteAlias(value = "/dashboard", layout = MainLayout.class)
+@PageTitle("User And Business Registration")
+@Route(value = "/views/registration", layout = MainLayout.class)
+@RouteAlias(value = "/business-registration", layout = MainLayout.class)
 @Uses(Icon.class)
-public class DashboardView extends Composite<VerticalLayout> {
+public class RegistrationView extends Composite<VerticalLayout> {
 
-    public DashboardView() {
+    public RegistrationView() {
         VerticalLayout layoutColumn2 = new VerticalLayout();
         HorizontalLayout layoutRow = new HorizontalLayout();
         getContent().setWidth("100%");

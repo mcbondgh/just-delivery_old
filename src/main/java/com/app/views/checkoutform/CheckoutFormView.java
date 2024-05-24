@@ -1,6 +1,7 @@
 package com.app.views.checkoutform;
 
-import com.app.views.MainLayout;
+import com.app.layouts.HomeLayout;
+import com.app.layouts.MainLayout;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;

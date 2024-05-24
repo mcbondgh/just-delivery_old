@@ -1,6 +1,7 @@
 package com.app.views.notification;
 
-import com.app.views.MainLayout;
+import com.app.layouts.HomeLayout;
+import com.app.layouts.MainLayout;
 import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.html.Paragraph;
@@ -10,13 +11,13 @@ import com.vaadin.flow.router.Route;
 import com.vaadin.flow.theme.lumo.LumoUtility.Margin;
 
 @PageTitle("Notification")
-@Route(value = "notification", layout = MainLayout.class)
+@Route(value = "views/notification", layout = MainLayout.class)
 public class NotificationView extends VerticalLayout {
 
     public NotificationView() {
         setSpacing(false);
 
-        Image img = new Image("images/empty-plant.png", "placeholder plant");
+        Image img = new Image("images/delivery-logo.png", "placeholder plant");
         img.setWidth("200px");
         add(img);
 

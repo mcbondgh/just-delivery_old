@@ -1,4 +1,4 @@
-package com.app.views;
+package com.app.layouts;
 
 import com.app.views.checkoutform.CheckoutFormView;
 import com.app.views.dashboard.DashboardView;
@@ -33,6 +33,7 @@ public class MainLayout extends AppLayout {
     private void addHeaderContent() {
         DrawerToggle toggle = new DrawerToggle();
         toggle.setAriaLabel("Menu toggle");
+
 
         viewTitle = new H1();
         viewTitle.addClassNames(LumoUtility.FontSize.LARGE, LumoUtility.Margin.NONE);

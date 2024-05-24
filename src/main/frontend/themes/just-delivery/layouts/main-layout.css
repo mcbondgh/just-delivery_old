@@ -1,9 +1,11 @@
 vaadin-scroller[slot="drawer"] {
   padding: var(--lumo-space-s);
+
 }
 
 vaadin-side-nav-item vaadin-icon {
   padding: 0;
+  font-size:12px
 }
 
 [slot="drawer"]:is(header, footer) {
@@ -13,6 +15,7 @@ vaadin-side-nav-item vaadin-icon {
   padding: var(--lumo-space-s) var(--lumo-space-m);
   min-height: var(--lumo-size-xl);
   box-sizing: border-box;
+
 }
 
 [slot="drawer"]:is(header, footer):is(:empty) {
