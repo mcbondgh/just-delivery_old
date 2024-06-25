@@ -3,6 +3,8 @@ package com.app.layouts;
 import com.app.views.login.LoginView;
 import com.app.views.registration.RegistrationView;
 import com.vaadin.flow.component.applayout.AppLayout;
+import com.vaadin.flow.component.contextmenu.MenuItem;
+import com.vaadin.flow.component.contextmenu.SubMenu;
 import com.vaadin.flow.component.html.*;
 import com.vaadin.flow.component.menubar.MenuBar;
 import com.vaadin.flow.component.menubar.MenuBarVariant;
@@ -55,6 +57,7 @@ public class HomeLayout extends AppLayout{
     public FlexLayout createFooter() {
         FlexLayout layout = new FlexLayout();
         layout.setWidthFull();
+        layout.addClassNames("main-layout-footer");
 
         return layout;
     }

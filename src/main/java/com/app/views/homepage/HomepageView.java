@@ -1,7 +1,9 @@
 package com.app.views.homepage;
 
 import com.app.layouts.HomeLayout;
+import com.app.views.packages.PackageTrackerView;
 import com.vaadin.flow.component.Component;
+import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
 import com.vaadin.flow.component.dependency.Uses;
@@ -37,8 +39,9 @@ public class HomepageView extends VerticalLayout {
                heroSection(),
                servicesSection(),
                contactSection(),
-              createFooter()
+               createFooter()
        );
+       navigationFunction();
     }
 
 /*********************************************************************************************************************
@@ -66,6 +69,16 @@ public class HomepageView extends VerticalLayout {
         justText.addClassNames("hero-item", "just-text");
         deliveryText.addClassNames("hero-item", "delivery-text");
         trackerButton.setClassName("tracker-button");
+
+        /***************************************************************************************************************
+                ACTION EVENT FOR TRACKER BUTTON CLICKED.
+         **************************************************************************************************************/
+        try {
+            trackerButton.addClickListener(click -> {
+                this.getUI().flatMap(ui -> ui.navigate(PackageTrackerView.class));
+            });
+        }catch (Exception e){e.printStackTrace();}
+
 
         layout.add(welcomeText, flexLayout, sloganText, trackerButton);
         return layout;
@@ -222,11 +235,16 @@ public class HomepageView extends VerticalLayout {
         messageField.setPlaceholder("Write your message here");
         messageField.setInvalid(messageField.isEmpty());
 
-
         //action event methods
-
-
         return contactFormLayout;
+    }
+
+    /*******************************************************************************************************************
+        IMPLEMENTATION OF ACTION EVENT LISTENERS
+     */
+
+    void navigationFunction() {
+
     }
 
 }//ens of class...

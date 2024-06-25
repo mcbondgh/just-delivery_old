@@ -4,6 +4,5 @@
  */
 * { font-family:"Poppins Bold"; }
 
-vaadin-app-layout.home-layout-app-layout-1 { background-color:var(--backgroundColr); }
 
 vaadin-vertical-layout { background-color:var(--backgroundColr); }
