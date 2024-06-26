@@ -1,7 +1,10 @@
 package com.app.layouts;
 
 import com.app.views.checkoutform.CheckoutFormView;
+import com.app.views.customers.CustomerProfileView;
+import com.app.views.customers.CustomersView;
 import com.app.views.dashboard.DashboardView;
+import com.app.views.drivers.*;
 import com.app.views.orders.OrdersView;
 import com.app.views.paymenthistory.Payments;
 import com.vaadin.flow.component.Component;
@@ -84,17 +87,17 @@ public class MainLayout extends AppLayout {
 
         //ADD NAVIGATION LINKS TO DRIVER MANAGER
         SideNav driversNav = new SideNav("Driver Manager");
-        SideNavItem addDriver = new SideNavItem("Add Driver", "", LineAwesomeIcon.CAR_SIDE_SOLID.create());
-        SideNavItem driverProfile = new SideNavItem("Driver Profile");
-        SideNavItem assignDriver = new SideNavItem("Assign Driver");
-        SideNavItem viewAssignedDrivers = new SideNavItem("View Assigned Packages");
-        SideNavItem ratingAndPerformance = new SideNavItem("Customer Rating");
+        SideNavItem addDriver = new SideNavItem("Drivers", DriversView.class, LineAwesomeIcon.CAR_SIDE_SOLID.create());
+        SideNavItem driverProfile = new SideNavItem("Driver Profile", DriverProfileView.class, LineAwesomeIcon.CAR_ALT_SOLID.create());
+        SideNavItem assignDriver = new SideNavItem("Assign Driver", AssignDriverView.class, LineAwesomeIcon.ASTERISK_SOLID.create());
+        SideNavItem viewAssignedDrivers = new SideNavItem("Assigned Packages", AssignedPackagesView.class, LineAwesomeIcon.MOTORCYCLE_SOLID.create());
+        SideNavItem ratingAndPerformance = new SideNavItem("Customer Rating", CustomerRatingView.class, LineAwesomeIcon.STAR_SOLID.create());
         driversNav.addItem(addDriver, assignDriver, viewAssignedDrivers, driverProfile, ratingAndPerformance);
 
         //ADD NAVIGATION LINK TO CUSTOMERS MANAGER
         SideNav customersNav = new SideNav("Customers Manager");
-        SideNavItem addCustomer = new SideNavItem("Add Customer", "", VaadinIcon.ADD_DOCK.create());
-        SideNavItem customerProfile = new SideNavItem("Customer Profile", "", LineAwesomeIcon.USERS_SOLID.create());
+        SideNavItem addCustomer = new SideNavItem("Customers", CustomersView.class, VaadinIcon.ADD_DOCK.create());
+        SideNavItem customerProfile = new SideNavItem("Customer Profile", CustomerProfileView.class, LineAwesomeIcon.USERS_SOLID.create());
         SideNav.SideNavI18n customers = new SideNav.SideNavI18n();
         customers.setToggle("toggle");
         customersNav.addItem(addCustomer, customerProfile);
