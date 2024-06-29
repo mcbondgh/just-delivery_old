@@ -122,7 +122,7 @@ public class PackageTrackerView extends VerticalLayout {
         //CREATE A DIV CONTAINER TO HOLD ITEM STATUS;
         Span placedStatus = new Span("Order Placed");
         Span assignedStatus = new Span("Driver Assigned");
-        Span transitionStatus = new Span("In Transition");
+        Span transitionStatus = new Span("Dispatched");
         Span deliveredStatus = new Span("Delivered");
 
         //set images

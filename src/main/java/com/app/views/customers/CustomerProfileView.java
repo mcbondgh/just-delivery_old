@@ -12,6 +12,7 @@ import com.vaadin.flow.component.html.H5;
 import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.component.shared.Tooltip;
 import com.vaadin.flow.component.textfield.EmailField;
 import com.vaadin.flow.component.textfield.PasswordField;
 import com.vaadin.flow.component.textfield.TextArea;
@@ -47,6 +48,7 @@ public class CustomerProfileView extends VerticalLayout {
         layout.setClassName("profile-header-container");
 
         H5 headerText = new H5("HELLO, CUSTOMER NAME!");
+        headerText.addClassNames("profile-header-text");
         layout.add(headerText);
         return layout;
     }//end of method
@@ -83,7 +85,7 @@ public class CustomerProfileView extends VerticalLayout {
         updateButton.addClassNames("tracker-button", "profile-update-button");
         deleteButton.addThemeVariants(ButtonVariant.LUMO_SMALL, ButtonVariant.LUMO_ERROR);
         checkbox.addClassNames("check-box");
-        checkbox.setTooltipText("select up enable password update");
+        checkbox.setTooltipText("Select to enable password update").setPosition(Tooltip.TooltipPosition.BOTTOM_START);
 
         Div pwdContainer = new Div(password1, confirmPwd);
         pwdContainer.addClassNames("profile-pwd-container");

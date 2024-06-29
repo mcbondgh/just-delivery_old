@@ -6,11 +6,12 @@ import java.sql.Timestamp;
 public class DriverData {
     private int driverId;
     private String driverName, email, address, phoneNumber;
-    private String licenseType, licenseNumber, plateNumber;
+    private String licenseType, nationalIdNumber, plateNumber;
     private String carInformation;
     private Date expiryDate;
     private String availability; //part-time, full-time
     private String status;
+    private Byte[] image;
     private Timestamp registrationDate;
 
 
@@ -65,12 +66,12 @@ public class DriverData {
         this.licenseType = licenseType;
     }
 
-    public String getLicenseNumber() {
-        return licenseNumber;
+    public String getNationalIdNumber() {
+        return nationalIdNumber;
     }
 
-    public void setLicenseNumber(String licenseNumber) {
-        this.licenseNumber = licenseNumber;
+    public void setNationalIdNumber(String nationalIdNumber) {
+        this.nationalIdNumber = nationalIdNumber;
     }
 
     public String getPlateNumber() {

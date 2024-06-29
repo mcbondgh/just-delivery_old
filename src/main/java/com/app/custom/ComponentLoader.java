@@ -15,6 +15,16 @@ public class ComponentLoader {
         comboBox.setItems(items);
     }
 
+    public static void setLicenseTypes(ComboBox<String> comboBox) {
+        String[] items = {"TYPE A", "TYPE B", "TYPE C", "TYPE D", "TYPE E"};
+        comboBox.setItems(items);
+    }
+
+    public static void setDispatcherType(ComboBox<String> comboBox) {
+        String[] items = {"Mini Van", "Motorbike", "Car"};
+        comboBox.setItems(items);
+    }
+
     public static void setRegionNames(ComboBox<String> comboBox) {
         API_CALLS = new ApiCalls();
         comboBox.setItems(API_CALLS.getRegionalNames());
