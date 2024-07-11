@@ -13,14 +13,14 @@ import jakarta.annotation.security.RolesAllowed;
 
 @PageTitle("Make Payment")
 @Route(value = "views/payments", layout = MainLayout.class)
-@JavaScript("./js/scripts.js")
+
 public class Payments extends VerticalLayout implements BeforeEnterObserver {
      public Payments(){
          add(renderPaymentForm());
      }
 
     public void beforeEnter(BeforeEnterEvent event) {
-        Notification.show("SHOW NOTHING", 3000, Notification.Position.TOP_CENTER);
+
     }
 
      VerticalLayout renderPaymentForm() {

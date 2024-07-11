@@ -1,5 +1,6 @@
 package com.app.layouts;
 
+import com.app.views.staff.AddStaffMemberView;
 import com.app.views.checkoutform.CheckoutFormView;
 import com.app.views.customers.CustomerProfileView;
 import com.app.views.customers.CustomersView;
@@ -12,6 +13,7 @@ import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
 import com.vaadin.flow.component.avatar.Avatar;
 import com.vaadin.flow.component.contextmenu.MenuItem;
+import com.vaadin.flow.component.dependency.JsModule;
 import com.vaadin.flow.component.html.*;
 import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.menubar.MenuBar;
@@ -28,7 +30,7 @@ import org.vaadin.lineawesome.LineAwesomeIcon;
  * The main view is a top-level placeholder for other views.
  */
 
-
+@JsModule("./js/scripts.js")
 public class MainLayout extends AppLayout {
 
     private H1 viewTitle;
@@ -70,7 +72,7 @@ public class MainLayout extends AppLayout {
         //SIDE NAVIGATION
         SideNav nav = new SideNav();
         SideNavItem dashboardNav = new SideNavItem("Dashboard", DashboardView.class, LineAwesomeIcon.CHART_PIE_SOLID.create());
-        SideNavItem staffNav = new SideNavItem("Staff Members", "", icon);
+        SideNavItem staffNav = new SideNavItem("Staff Members", AddStaffMemberView.class, icon);
         SideNavItem packagesNav = new SideNavItem("My Packages", "", LineAwesomeIcon.BOX_OPEN_SOLID.create());
         SideNavItem feedbackNav = new SideNavItem("Feedbacks", CheckoutFormView.class, LineAwesomeIcon.GRADUATION_CAP_SOLID.create());
         SideNavItem paymentsNav = new SideNavItem("My Payments" , Payments.class, LineAwesomeIcon.MONEY_BILL_SOLID.create());
